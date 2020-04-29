@@ -24,13 +24,12 @@ def gcd(a, b):
 
         else:
             b = b - a
-
-
+            
     return a
 
 #Find the inverse mod of a number in the prime field p
 #using the extended euclidain algorithm
-def extended_euclid(a,p):
+def extended_euclid(a, p):
 
     #Find if the input is positive or negative
     if a < 0:
@@ -40,14 +39,12 @@ def extended_euclid(a,p):
         
     a *= sign
 
-
     c = gcd(a, p)
     
     #gcd must be one or else the inverse does not exist
 
     u = a
     v = p
-
 
     u1 = 1
     u3 = a
@@ -112,7 +109,7 @@ def Point_Double(P, a, p):
 
     return R
 
-
+#scalar addition function
 def Point_Addition(P, Q, a, p):
 
 
@@ -135,7 +132,7 @@ def Point_Addition(P, Q, a, p):
 
 #Scalar multiplication program. P is the starting point
 #d is the amount to multiply by, a and p are defined by the
-#curve.
+#curve. This is using the russian algorithm for multiplication
 def Scalar_multiplication(P, d, a, p):
 
     sumation = 1
@@ -188,23 +185,29 @@ d = 17
 #on and therefore use as your keys for another encryption
 #algorithm such as AES or twofish
 
-d1 = 10
-d2 = 14
+#Alices key
+dA = 10
 
-[r, R1] = Scalar_multiplication(P, d1, a, p)
-[r, R2] = Scalar_multiplication(P, d2, a, p)
+#Bobs key
+dB = 14
 
+#Alice moves from the start point to her public point
+[r, PA] = Scalar_multiplication(P, dA, a, p)
+#Bob moves from the start point to his public point
+[r, PB] = Scalar_multiplication(P, dB, a, p)
 
-[r, Q1] = Scalar_multiplication(R1, d2, a, p)
-[r, Q2] = Scalar_multiplication(R2, d1, a, p)
+#Bob moves to his point
+[r, Pf1] = Scalar_multiplication(PA, dB, a, p)
+#Alice moves from Bob's point to the end point
+[r, Pf2] = Scalar_multiplication(PB, dA, a, p)
 
 
 print('---------Q1--------')
-print('(' + repr(Q1.x) + ', ' + repr(Q1.y) + ')')
+print('(' + repr(Pf1.x) + ', ' + repr(Pf1.y) + ')')
 print('-------------------')
 
 
 print('---------Q2--------')
-print('(' + repr(Q2.x) + ', ' + repr(Q2.y) + ')')
+print('(' + repr(Pf2.x) + ', ' + repr(Pf2.y) + ')')
 print('-------------------')
 
