@@ -88,23 +88,34 @@ def extended_euclid(a, p):
     
     return inv
 
+#P is the start point
+#p is the prime field
+#what is a?
+#Am I working on the curve y^2 = x^3 + ax + b?
+#this explains where the 3 came from as the s values are the differentials of
+#each side. What is the point of the b? Does the b vanish?
 def Point_Double(P, a, p):
     
+    #why are we calculating the differential of x?
     s1 = (3 * pow(P.x,2) + a) % p
-
+    
+    #why are we inverting this? Why are we working out the differential of y?
     s2 = extended_euclid((2 * P.y),p)
 
+    #why are we multiplying x and y?
     S = (s1 * s2) % p
 
     #print S
-
+    
+    #what is this x3 value
     x3 = (pow(S,2) - P.x - P.x) % p
     #print x3
-
+    
+    #what is this y3 value?
     y3 = ((S * (P.x - x3)) - P.y) % p
 
     #print y3
-
+    #is this the final point, what did we just do?
     R = Point(x3, y3)
 
     return R
@@ -132,7 +143,8 @@ def Point_Addition(P, Q, a, p):
 
 #Scalar multiplication program. P is the starting point
 #d is the amount to multiply by, a and p are defined by the
-#curve. This is using the russian algorithm for multiplication
+#curve.
+#Is this using russian multiplication?
 def Scalar_multiplication(P, d, a, p):
 
     sumation = 1
@@ -155,8 +167,7 @@ def Scalar_multiplication(P, d, a, p):
     
 
 
-#create a new class for the public key, the points on the curve
-
+#create a new class for the public key, the points on the curve\\
 class Point:
     def __init__(self, x_val, y_val):
          self.x = int(x_val)
@@ -167,7 +178,9 @@ class Point:
 #now start actually doing things.
 #Here we give an example of point multiplication
 P = Point(5,1)
+#we will experement with the curve y^2 = x^3 + 2*x + b
 a = 2
+b = 0
 p = 17
 
 

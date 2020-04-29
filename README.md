@@ -8,15 +8,19 @@ A brief rundown of these algorithms is below
 
 ### ECDH ###
 
-In this system Alice and Bob will agree on a curve to use, the domain of the curve and the starting point for the algorithm. For example when working with the curve y<sup>2</sup>=x<sup>2</sup> + &alpha;x + &beta; they must decide on the values of &alpha; and &beta; as well as the domain, p. Next they must decide their starting point G. Now Alice and Bob will both calculate n&dot;G where n is their private keys. They will send the results to one another and then repeat with each other's ending points as the start point in order to get a shared end point which they will use as their final shared key.
+In this system Alice and Bob will agree on a curve to use, the domain of the curve and the starting point for the algorithm. For example when working with the curve y<sup>2</sup>=x<sup>3</sup> + &alpha;x + &beta; they must decide on the values of &alpha; and &beta; as well as the domain, p. Next they must decide their starting point G. Now Alice and Bob will both calculate n&dot;G where n is their private keys. They will send the results to one another and then repeat with each other's ending points as the start point in order to get a shared end point which they will use as their final shared key.
 
 ### ECDS ###
 
 ### The mathematics of eliptic fields ###
 
-In order to do these things however we must understand the mathematics of eliptic curves over finite fields. Since we are working now with field theory everything gets really complicated. All mathematical operations must now be reconceptualised. We see the complexities of algebra in finite fields when we look at AES and Twofish which also make use of finite fields. 
+In order to do these things however we must understand the mathematics of eliptic curves over finite fields. Since we are working now with field theory everything gets really complicated. All mathematical operations must now be reconceptualised. We also see the complexities of algebra in finite fields when we look at AES and Twofish which also make use of finite fields so they are definitly worth studying. 
 
 
+
+
+
+# NOTE FIX REPO NAME SPELLING #
 
 ### Sources ###
 
