@@ -15,7 +15,7 @@ In order to do these things however we must understand the mathematics of ellipt
 
 In order to add points together we draw a line between the two points and find the third intesection point. This is then flipped in the y axis to find the final value of the point.
 
-<image src='./curve_drawing_addition.png' style="width:300px;"></image>
+<image src='./curve_drawing_addition.png' width="300px;"></image>
 
 We now have two equations, A and B, which describe the curve and the line respectively.
 
