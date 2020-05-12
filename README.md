@@ -1,6 +1,6 @@
 ## README ##
 
-In this repo I have some examples of elliptic curve cryptography. 
+In this repo I have an example of elliptic curve cryptography. 
 
 Elliptic curve cryptography involves moving arround a field defined by an elliptic curve. This may be used in two ways. Either Alice and Bob wish to exchange keys in which they use the elliptic curve field in order to generate a shared key using the elliptic curve Diffie-Hellman (ECDH) algorithm or else Bob wishes to get a signature from Alice in which case they will use the elliptic Curve Digital Signature (ECDS) algorithm. Only the key sharing algorithm will be discussed here because I'm lazy.
 
