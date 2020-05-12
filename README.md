@@ -37,7 +37,7 @@ by solving these equations within the prime field p we end up with the sum of th
 
 If we want to add a point to itself, in effect double it, we draw a line tangent to our point and find the point (x<sub>3</sub>, y<sub>3</sub>) as shown below.
 
-EXPLAIN TANGENT STUFF
+<image src='./curve_drawing_doubling.png'></image>
 
 Since we have ways of doubling and adding we can perform multiplication of a point by a scalar by using the russian peasant multiplication algorithm.
 
