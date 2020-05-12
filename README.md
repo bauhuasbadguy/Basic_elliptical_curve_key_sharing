@@ -15,7 +15,7 @@ In order to do these things however we must understand the mathematics of ellipt
 
 In order to add points together we draw a line between the two points and find the third intesection point. This is then flipped in the y axis to find the final value of the point.
 
-<image src='./curve_drawing_addition.png' width="300px;"></image>
+<image src='./curve_drawing_addition.png' width="600px;" align:center></image>
 
 We now have two equations, A and B, which describe the curve and the line respectively.
 
@@ -35,7 +35,7 @@ by solving these equations within the prime field p we end up with the the point
 
 If we want to add a point to itself, in effect double it, we draw a line tangent to our point and find the point (x<sub>3</sub>, y<sub>3</sub>) as shown below.
 
-<image src='./curve_drawing_doubling.png'></image>
+<image src='./curve_drawing_doubling.png' width:"600px;" align:center></image>
 
 Since we have ways of doubling and adding we can perform multiplication of a point by a scalar by using the russian peasant multiplication algorithm.
 
