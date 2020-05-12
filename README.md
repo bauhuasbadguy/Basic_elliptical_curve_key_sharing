@@ -8,6 +8,9 @@ Elliptic curve cryptography involves moving arround a field defined by an ellipt
 
 In this system Alice and Bob will agree on a curve to use, the domain of the curve and the starting point for the algorithm. For example when working with the curve y<sup>2</sup>=x<sup>3</sup> + &alpha;x + &beta; they must decide on the values of &alpha; and &beta; as well as the domain, p. Next they must decide their starting point G. Now Alice and Bob will both calculate n*G where n is their private keys. They will send the results to one another and then repeat with each other's ending points as the start point in order to get a shared end point which they will use as their final shared key.
 
+### IMPORTANT NOTE ###
+
+I am some guy in a room. You should never use the code here for real encryption purposes. I hope it will help you understand the principal of elliptic curve key sharing but this has not been checked by anyone with any real expertise or training in cryptography.
 
 ### The mathematics of elliptic fields ###
 
