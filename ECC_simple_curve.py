@@ -10,6 +10,7 @@ import math
 #http://arstechnica.com/security/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/
 #(This ones really good actually)
 #https://en.wikipedia.org/wiki/Elliptic_curve_cryptography
+#https://www.math.brown.edu/~jhs/Presentations/WyomingEllipticCurve.pdf
 
 
 #Define some maths functions
@@ -96,23 +97,20 @@ def extended_euclid(a, p):
 #each side. What is the point of the b? Does the b vanish?
 def Point_Double(P, a, p):
     
-    #why are we calculating the differential of x?
+    #Find the gradient of the line in x at point P
     s1 = (3 * pow(P.x,2) + a) % p
     
-    #why are we inverting this? Why are we working out the differential of y?
+    #Get the inverse of the gradient of the line in y at point P
     s2 = extended_euclid((2 * P.y),p)
 
-    #why are we multiplying x and y?
-    S = (s1 * s2) % p
+    #find the gradient of the line
+    m = (s1 * s2) % p
 
-    #print S
-    
-    #what is this x3 value
-    x3 = (pow(S,2) - P.x - P.x) % p
-    #print x3
-    
+    #find the x value we go through
+    x3 = (pow(m,2) - P.x - P.x) % p
+
     #what is this y3 value?
-    y3 = ((S * (P.x - x3)) - P.y) % p
+    y3 = ((m * (P.x - x3)) - P.y) % p
 
     #print y3
     #is this the final point, what did we just do?
@@ -123,17 +121,24 @@ def Point_Double(P, a, p):
 #scalar addition function
 def Point_Addition(P, Q, a, p):
 
-
+    #calculate dy of the line L in the prime field p
     s1 = (Q.y - P.y) % p
 
+    #calculate dx of the line L in the prime field y and then do 1/dx
+    #so we can find the gradient of the line to draw it 
     s2 = extended_euclid((Q.x - P.x), p)
 
-    S = (s1 * s2) % p
+    #m is the gradient of the line through P and Q
+    m = (s1 * s2) % p
 
-    x3 = (pow(S,2) - P.x - Q.x) % p
+    #find the x point we end up at
+    #This is subing in the value of m we found into y=mx+c
+    x3 = (pow(m,2) - P.x - Q.x) % p
     #print x3
 
-    y3 = ((S * (P.x - x3)) - P.y) % p
+    #find the y point we end up at
+    #how is this working exactly?
+    y3 = ((m * (P.x - x3)) - P.y) % p
 
     #print y3
 
