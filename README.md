@@ -17,9 +17,9 @@ In order to do these things however we must understand the mathematics of elipti
 
 In order to add points together 
 
-EXPLAIN DRAWING A LINE
+<image src='./curve_drawing_addition.png'></image>
 
-We now have two equations A and B
+We now have two equations (for the ) A and B
 
 y<sup>2</sup> = x<sup>3</sup> + Ax + B --- (A)
 
