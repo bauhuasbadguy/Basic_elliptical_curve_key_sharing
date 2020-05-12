@@ -42,8 +42,6 @@ Since we have ways of doubling and adding we can perform multiplication of a poi
 This is a simple algorithm for performing multiplication which is described in full in reference #6.
 
 
-# NOTE FIX REPO NAME SPELLING #
-
 ### Sources ###
 
 * http://www.crypto-textbook.com/

@@ -109,10 +109,10 @@ def Point_Double(P, a, p):
     #find the x value we go through
     x3 = (pow(m,2) - P.x - P.x) % p
 
-    #what is this y3 value?
+    #find the y point we end up at
+    #Solve y3 = m(x3-x1) + y1 and then invert it
     y3 = ((m * (P.x - x3)) - P.y) % p
-
-    #print y3
+    
     #is this the final point, what did we just do?
     R = Point(x3, y3)
 
@@ -137,11 +137,11 @@ def Point_Addition(P, Q, a, p):
     #print x3
 
     #find the y point we end up at
-    #how is this working exactly?
+    #Solve y3 = m(x3-x1) + y1 and then invert it
     y3 = ((m * (P.x - x3)) - P.y) % p
 
     #print y3
-
+    #convert our co-ords to a point
     R = Point(x3, y3)
 
     return R
