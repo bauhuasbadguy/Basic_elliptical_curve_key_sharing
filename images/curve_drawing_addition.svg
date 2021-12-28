@@ -9,13 +9,13 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="96"
    inkscape:export-xdpi="96"
-   inkscape:export-filename="/home/stuart/Documents/encrytion_stuff/Basic_eliptical_curve/curve_drawing_doubling.png"
+   inkscape:export-filename="/home/stuart/Documents/encrytion_stuff/Basic_elliptical_curve_key_sharing/images/curve_drawing_addition.png"
    width="192mm"
    height="184mm"
    viewBox="0 0 192 184"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
    sodipodi:docname="curve_drawing_addition.svg">
   <defs
      id="defs2">
@@ -86,15 +86,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="-72.523573"
+     inkscape:cx="98.904998"
      inkscape:cy="351.15137"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1853"
-     inkscape:window-height="1025"
-     inkscape:window-x="67"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
      inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
@@ -105,7 +105,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -113,6 +113,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:1;stroke-linejoin:round"
+       id="rect2449"
+       width="190.27213"
+       height="183.02922"
+       x="0.66607279"
+       y="0.97161406" />
     <g
        transform="translate(-7.6443231,-105.23548)"
        id="g1378">
